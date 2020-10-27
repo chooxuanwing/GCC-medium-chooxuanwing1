@@ -1,6 +1,49 @@
 # You may change this function parameters
 def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences, participantsPreferences):
-    return -1
+    
+    print(numOfParticipants)
+    print(numOfBankers)
+    print('b',bankersPreferences)
+    print('p',participantsPreferences)
+    print('********************')
+    temp=0
+    count=0
+    temp1=0
+    count1=0
+
+    for i in participantsPreferences:
+        print(i)
+        temp = participantsPreferences.count(i)
+        if (temp>count):
+            count = temp
+    print(count)
+
+    for j in bankersPreferences:
+        print(j)
+        temp1=bankersPreferences.count(j)
+        if(temp1>count1):
+            count1=temp1
+    print(temp1)
+
+    if (count1>count):
+        return count1
+    return count
+    # for i in range(0,len(participantsPreferences)):
+    #     # print(bankersPreferences[participantsPreferences[i][0]-1][0])
+    #     # print(participantsPreferences[i][0])
+    #     if (participantsPreferences[i][0]==bankersPreferences[participantsPreferences[i][0]-1][0]):
+    #         # participantsPreferences[i].remove(participantsPreferences[i][0])
+    #         # participantsPreferences[i].pop(0)
+    #         participantsPreferences[i][0]=0
+
+    #     if (bankersPreferences[i][0]==participantsPreferences[bankersPreferences[i][0]-1][0]):
+    #         # participantsPreferences[i].remove(participantsPreferences[i][0])
+    #         # participantsPreferences[i].pop(0)
+    #         bankersPreferences[i][0]=0
+
+    #     print('b',bankersPreferences)
+
+    #     print('p',participantsPreferences)
 
 
 def main():
@@ -16,7 +59,11 @@ def main():
 
     bankersPreferencesListOfList = parsePreferences(bankersPreferences)
     participantsPreferencesListOfList = parsePreferences(participantsPreferences)
-
+    # numOfBankers=3
+    # numOfParticipants=3
+    # bankersPreferencesListOfList = [[1], [1], [1]]
+    # participantsPreferencesListOfList = [[3], [1], [1]]
+    
     answer = calculateMinimumSession(
         numOfBankers,
         numOfParticipants,
@@ -25,7 +72,7 @@ def main():
     )
 
     # Please do not remove the below line.
-    print(answer)
+    # print(answer)
     # Do not print anything after this line
 
 
