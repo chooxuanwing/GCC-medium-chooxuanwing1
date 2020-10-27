@@ -9,7 +9,7 @@ def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences,
     temp=0
     count=0
     temp1=0
-    count1=0
+    count1=0 
 
     for i in participantsPreferences:
         # print(i)
