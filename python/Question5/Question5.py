@@ -24,11 +24,12 @@ def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences,
         temp1=bankersPreferences.count(j)
         if(temp1>count1):
             count1=temp1
-    # print(count1)
+    # print(count,count1)
 
     if (count1>count):
         return count1
-    return count
+    else:
+        return count
    
 
     
@@ -45,7 +46,7 @@ def main():
     numOfParticipants = int(secondLine[0])
     bankersPreferences = firstLine[1].split(",")
     participantsPreferences = secondLine[1].split(",")
-
+ 
     bankersPreferencesListOfList = parsePreferences(bankersPreferences)
     participantsPreferencesListOfList = parsePreferences(participantsPreferences)
 
