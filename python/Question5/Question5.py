@@ -1,7 +1,7 @@
 # You may change this function parameters
 def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences, participantsPreferences):
     
-    print(numOfParticipants)
+    print(numOfParticipants) 
     print(numOfBankers)
     print('b',bankersPreferences)
     print('p',participantsPreferences)
