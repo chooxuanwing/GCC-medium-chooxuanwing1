@@ -33,7 +33,7 @@ def encrypt(words):
         for j in range(remainder,upBound):
             for i in range(0, stringLength//lowBound):
                 out += wordsFormatted[(i*upBound) +j] 
-                print(out)
+                # print(out) 
             out += " "
         return out
 
