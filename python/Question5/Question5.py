@@ -1,11 +1,11 @@
 # You may change this function parameters
 def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences, participantsPreferences):
     
-    print(numOfParticipants) 
-    print(numOfBankers)
-    print('b',bankersPreferences)
-    print('p',participantsPreferences)
-    print('********************')
+    # print(numOfParticipants) 
+    # print(numOfBankers)
+    # print('b',bankersPreferences)
+    # print('p',participantsPreferences)
+    # print('********************')
     temp=0
     count=0
     temp1=0
