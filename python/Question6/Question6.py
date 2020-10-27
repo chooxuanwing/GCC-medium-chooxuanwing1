@@ -10,19 +10,20 @@ def encrypt(words):
     lowBound = math.floor(sqrt)
     upBound = math.ceil(sqrt)
     checkBox = lowBound*upBound
-    remainder = stringLength%lowBound
 
     if (checkBox < stringLength):
         lowBound += 1
+    remainder = stringLength%lowBound
+
     print(stringLength, lowBound, upBound,remainder)
 
     out = ''
     
     count =0
-
+    j=0
     while (remainder!=0):
-        while (count < remainder-1):
-            count += 1
+        while (j < remainder-1):
+            # count += 1
             for j in range(0,remainder):
                 for i in range(0,stringLength//lowBound+ 1):
                     out += wordsFormatted[(i*upBound)+j]
@@ -47,7 +48,7 @@ def encrypt(words):
 def main():
     words = input()
 
-    # answer = encrypt('coding')
+    # answer = encrypt('its harder to read code than to write itttyuy')
     answer = encrypt(words)
     # Please do not remove the below line.
     print(answer)
