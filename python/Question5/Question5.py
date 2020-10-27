@@ -1,7 +1,8 @@
 # You may change this function parameters
 def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences, participantsPreferences):
     
-    # print(numOfParticipants) 
+    
+    # print(numOfParticipants)
     # print(numOfBankers)
     # print('b',bankersPreferences)
     # print('p',participantsPreferences)
@@ -9,7 +10,7 @@ def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences,
     temp=0
     count=0
     temp1=0
-    count1=0 
+    count1=0
 
     for i in participantsPreferences:
         # print(i)
@@ -28,22 +29,10 @@ def calculateMinimumSession(numOfBankers, numOfParticipants, bankersPreferences,
     if (count1>count):
         return count1
     return count
-    # for i in range(0,len(participantsPreferences)):
-    #     # print(bankersPreferences[participantsPreferences[i][0]-1][0])
-    #     # print(participantsPreferences[i][0])
-    #     if (participantsPreferences[i][0]==bankersPreferences[participantsPreferences[i][0]-1][0]):
-    #         # participantsPreferences[i].remove(participantsPreferences[i][0])
-    #         # participantsPreferences[i].pop(0)
-    #         participantsPreferences[i][0]=0
+   
 
-    #     if (bankersPreferences[i][0]==participantsPreferences[bankersPreferences[i][0]-1][0]):
-    #         # participantsPreferences[i].remove(participantsPreferences[i][0])
-    #         # participantsPreferences[i].pop(0)
-    #         bankersPreferences[i][0]=0
-
-    #     print('b',bankersPreferences)
-
-    #     print('p',participantsPreferences)
+    
+    
 
 
 def main():
@@ -59,11 +48,7 @@ def main():
 
     bankersPreferencesListOfList = parsePreferences(bankersPreferences)
     participantsPreferencesListOfList = parsePreferences(participantsPreferences)
-    # numOfBankers=2
-    # numOfParticipants=3
-    # bankersPreferencesListOfList = [[1], [2,3]]
-    # participantsPreferencesListOfList = [[1], [2], [2]]
-    
+
     answer = calculateMinimumSession(
         numOfBankers,
         numOfParticipants,
