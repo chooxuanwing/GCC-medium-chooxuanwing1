@@ -10,7 +10,7 @@ def maximumExpectedMoney(noOfTradesAvailable, maximumTradesAllowed,p,x,y):
     # print(totalTrades)
 
     for j in range(0,maximumTradesAllowed):
-        if(totalTrades[j]<0):
+        if(totalTrades[j]<=0):
             break
         sum+=totalTrades[j]
     # print(sum)
