@@ -14,32 +14,40 @@ def encrypt(words):
 
     if (checkBox < stringLength):
         lowBound += 1
-    print(stringLength, upBound, lowBound,remainder)
+    print(stringLength, lowBound, upBound,remainder)
 
     out = ''
     
     count =0
 
-    while (count < remainder-1):
-        count += 1
-        for j in range(0,remainder):
-            for i in range(0,stringLength//lowBound+ 1):
-                out += wordsFormatted[(i*upBound)+j]
+    while (remainder!=0):
+        while (count < remainder-1):
+            count += 1
+            for j in range(0,remainder):
+                for i in range(0,stringLength//lowBound+ 1):
+                    out += wordsFormatted[(i*upBound)+j]
+                    print(out)
+                out += " "
+
+        for j in range(remainder,upBound):
+            for i in range(0, stringLength//lowBound):
+                out += wordsFormatted[(i*upBound) +j] 
                 print(out)
             out += " "
+        return out
 
-    for j in range(remainder,upBound):
-        for i in range(0, stringLength//lowBound):
-            out += wordsFormatted[(i*upBound) +j]
-            print(out)
+    print('NO REMAINDER')
+    for j in range(0, upBound):
+        for i in range(0,lowBound):
+            out += wordsFormatted[i*upBound+j]
         out += " "
-    return " "
+    return out
 
 
 def main():
     words = input()
 
-    # answer = encrypt('its harder to read code than to write it')
+    # answer = encrypt('coding')
     answer = encrypt(words)
     # Please do not remove the below line.
     print(answer)
