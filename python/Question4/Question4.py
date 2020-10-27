@@ -10,24 +10,26 @@ def maximumExpectedMoney(noOfTradesAvailable, maximumTradesAllowed,p,x,y):
     print(totalTrades)
 
     for j in range(0,maximumTradesAllowed):
+        if(totalTrades[j]<0):
+            break
         sum+=totalTrades[j]
     print(sum)
-
+    sum=round(sum,2)
     return sum
 
 def main():
     # This part may require participants to fill in as well.
-    noOfTradesAvailable, maximumTradesAllowed = list(map(int, input().split()))
-    p = list(map(float, input().split()))
-    x = list(map(float, input().split()))
-    y = list(map(float, input().split()))
+    # noOfTradesAvailable, maximumTradesAllowed = list(map(int, input().split()))
+    # p = list(map(float, input().split()))
+    # x = list(map(float, input().split()))
+    # y = list(map(float, input().split()))
 
-    # noOfTradesAvailable = 4
-    # maximumTradesAllowed = 2
-    # p=[0.5 ,0.5 ,0.5 ,0.5]
-    # x=[4.00, 1.00, 2.00, 3.00]
-    # y=[4.00 ,0.50 ,1.00 ,1.00]
-    
+    noOfTradesAvailable = 2
+    maximumTradesAllowed = 2
+    p=[0.9,0.5]
+    x=[1,0.5]
+    y=[100,0.4]
+
     # Participants may update the following function parameters
     answer = maximumExpectedMoney(noOfTradesAvailable, maximumTradesAllowed,p,x,y)
     # Do not remove below line
