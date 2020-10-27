@@ -4,7 +4,7 @@ def encrypt(words):
     # Participants code will be here
     
     wordsFormatted = words.replace(" ","")
-    print(wordsFormatted)
+    print(wordsFormatted) 
     stringLength = len(wordsFormatted)
     sqrt = pow(stringLength,0.5)
     lowBound = math.floor(sqrt)
