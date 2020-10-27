@@ -13,8 +13,8 @@ def maximumExpectedMoney(noOfTradesAvailable, maximumTradesAllowed,p,x,y):
         if(totalTrades[j]<0):
             break
         sum+=totalTrades[j]
-    print(sum)
-    sum=round(sum,2)
+    # print(sum)
+    sum=format(sum, '.2f')
     return sum
 
 def main():
@@ -23,7 +23,7 @@ def main():
     p = list(map(float, input().split()))
     x = list(map(float, input().split()))
     y = list(map(float, input().split()))
-
+ 
     # noOfTradesAvailable = 2
     # maximumTradesAllowed = 2
     # p=[0.9,0.5]
